@@ -2,7 +2,7 @@
 Example usage of ready-to-use controllers: P, PI, PID, time lag.
 
 
-#Content:
+# Content:
 
 Python3 package + example.
 
@@ -15,7 +15,7 @@ Usage in the loop allows creating control algorithms in interaction with the env
 
 --------------------------------------------------
 
-#Zawartość:
+# Zawartość:
 
 Paczka python3 + przykład użycia regulatorów PI.
 
