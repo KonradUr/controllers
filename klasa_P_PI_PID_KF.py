@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Feb 15 23:22:19 2018
+Created on Thu Feb 15 23:22:19 2018-2020
 
 @author: Konrad Urbański
 """
@@ -36,13 +36,15 @@ class regPIpar:
         uchyb = (ref-meas)
         wyP = uchyb*KP
         wyI = uchyb*KI*delta + self.pam
-        wy = wyP+wyI
+        
         
         if wyI>ogrP:
             wyI=ogrP
         if wyI<ogrN:
             wyI=ogrN
-        
+
+        wy = wyP+wyI
+
         if wy>ogrP:
             wy=ogrP
         if wy<ogrN:
@@ -54,7 +56,7 @@ class regPIpar:
 
 
     def version(self):
-        print("v0.11")
+        print("v0.12")
 
 
 class timelag:
@@ -94,13 +96,15 @@ class regPIDpar:
         wyI = uchyb*KI*delta + self.pam
         wyD = ((uchyb-self.pamUchyb)/delta)*KD
         
-        wy = wyP+wyI+wyD
+        
         
         if wyI>ogrP:
             wyI=ogrP
         if wyI<ogrN:
             wyI=ogrN
-        
+
+        wy = wyP+wyI+wyD
+
         if wy>ogrP:
             wy=ogrP
         if wy<ogrN:
@@ -113,7 +117,7 @@ class regPIDpar:
 
 
     def version(self):
-        print("v0.11")
+        print("v0.12")
 #####################################
 
 
@@ -211,4 +215,5 @@ class KF:
     def version(self):
         print("v0.11")
         print("works properly for constant calculation period")
+
 
